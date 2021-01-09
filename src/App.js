@@ -3,6 +3,7 @@ import SearchMovies from './components/SearchMovies'
 import Movies from './components/Movies'
 import Nominations from './components/Nominations'
 import axios from 'axios'
+import './App.css'
 
 function FetchData() {
 
@@ -45,15 +46,15 @@ export default function App() {
         setLoading={setLoading}
       />
       <div className='ui divider' />
-      <div>
-        <div>
+      <div className='float-container'>
+        <div className='float-child'>
           <Movies
             results={results}
             movieSearch={movieSearch}
             isLoading={isLoading}
           />
         </div>
-        <div>
+        <div className='float-child'>
           <Nominations
             nominations={nominations}
             setNominations={setNominations}

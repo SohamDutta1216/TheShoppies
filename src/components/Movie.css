@@ -1,0 +1,11 @@
+.photo {
+  height:300px;
+  width:200px;
+}
+.center {
+  text-align: center
+}
+
+.center-button{
+  align-items: center;
+}
