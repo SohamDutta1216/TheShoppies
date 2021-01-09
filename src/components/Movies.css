@@ -1,3 +1,7 @@
 .center {
   text-align: center
 }
+
+.aligned {
+  align-items: center;
+}

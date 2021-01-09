@@ -52,6 +52,8 @@ export default function App() {
             results={results}
             movieSearch={movieSearch}
             isLoading={isLoading}
+            nominations={nominations}
+            setNominations={setNominations}
           />
         </div>
         <div className='float-child'>

@@ -12,7 +12,10 @@ const Movies = (props) => {
             return (
               <Movie
                 key={idx}
-                movie={movie} />
+                movie={movie}
+                nominations={props.nominations}
+                setNominations={props.setNominations}
+              />
             )
           })}</div> :
           <div className='center'> ... </div>
