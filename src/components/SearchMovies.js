@@ -1,23 +1,25 @@
 import React from 'react'
 
-const searchMovies = (props) => {
+export default function searchMovies(props) {
+  const setLoading = props.setLoading
+  const setSearch = props.setSearch
+  const movieSearch = props.movieSearch
   return (
     <div className='ui center aligned container'>
       <div className="ui category search">
-        <div className="ui icon input">
+        <br />
+        <div className="ui massive icon input">
           <input className="prompt" type="text" placeholder="Search Movies"
-            value={props.movieSearch}
-            onChange={event => {
-              props.setLoading(true)
-              props.setSearch(event.target.value)
+            value={movieSearch}
+            onChange={e => {
+              setLoading(true)
+              setSearch(e.target.value)
             }}
           />
           <i className="search icon"></i>
         </div>
         <div className="results"></div>
       </div>
-    </div>
+    </div >
   )
 }
-
-export default searchMovies

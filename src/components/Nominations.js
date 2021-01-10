@@ -2,25 +2,37 @@ import React from 'react'
 import './Nominations.css'
 import Nominated from './Nominated.js'
 
-const Nominations = (props) => {
-  const nominatedMovies = Object.keys(props.nominations)
+export default function Nominations(props) {
+
+  const nominations = props.nominations
+  const nominatedMovies = Object.keys(nominations)
+  const setNominations = props.setNominations
+
+  const removeNomination = function (movie) {
+    delete nominations[movie]
+    setNominations({ ...nominations })
+  }
+
   return (
     <div className='ui column'>
       <div className='ui segment'>
         <h1 className='center'>Nominations</h1>
         <div>
           {nominatedMovies.length > 0 ?
-            nominatedMovies.map((nominate, idx) => {
+            nominatedMovies.map((movie, idx) => {
               return (
                 <div key={idx}>
                   <Nominated
-                    nominate={props.nominations[nominate]}
+                    removeNomination={removeNomination}
+                    nominate={nominations[movie]}
                   />
                 </div>
               )
             })
             :
-            <div>...</div>
+            <div className='center'>
+              <div className='ui text loader'>Loading</div>
+            </div>
           }
         </div>
       </div>
@@ -28,4 +40,3 @@ const Nominations = (props) => {
   )
 }
 
-export default Nominations

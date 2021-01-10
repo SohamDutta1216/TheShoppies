@@ -17,7 +17,7 @@ function FetchData() {
       setTimeout(() => {
         setLoading(false)
         setResults(res.data.Search)
-      }, 100)
+      }, 10)
     })
   }, [movieSearch])
   return {
@@ -34,18 +34,20 @@ export default function App() {
     setSearch,
     setLoading,
     nominations,
-    setNominations
+    setNominations,
   } = FetchData();
 
   return (
     <div>
-      <h1 className='ui center aligned huge header'>The Shoppies</h1>
+      <div className='title'>
+        <h1 className='ui center aligned huge header'>The Shoppies</h1>
+      </div>
+      <div className='ui divider' />
       <SearchMovies
         movieSearch={movieSearch}
         setSearch={setSearch}
         setLoading={setLoading}
       />
-      <div className='ui divider' />
       <div className='float-container'>
         <div className='float-child'>
           <Movies
