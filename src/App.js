@@ -25,8 +25,8 @@ function FetchData() {
   }
 }
 
-
 export default function App() {
+
   const {
     results,
     movieSearch,
@@ -36,7 +36,6 @@ export default function App() {
     nominations,
     setNominations,
   } = FetchData();
-
   return (
     <div>
       <div className='title'>

@@ -21,6 +21,7 @@ const Movies = (props) => {
                 nominations={nominations}
                 setNominations={setNominations}
               />
+
             )
           })}</div>
           :
