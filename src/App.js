@@ -17,7 +17,7 @@ function FetchData() {
       setTimeout(() => {
         setLoading(false)
         setResults(res.data.Search)
-      }, 30)
+      }, 0)
     })
   }, [movieSearch])
   return {
@@ -26,7 +26,6 @@ function FetchData() {
 }
 
 export default function App() {
-
   const {
     results,
     movieSearch,
@@ -38,20 +37,22 @@ export default function App() {
   } = FetchData();
   return (
     <div style={{ background: '#fbf7ed' }}>
-      <h1 className='title'>The Shoppies</h1>
-      <div className='ui divider' />
+      <div className='ui top fixed menu'>
+        <div className="item">
+          <img className='title' src='/logo.png' alt='' />
+        </div>
+        <div className="item">
+          <SearchMovies
+            movieSearch={movieSearch}
+            setSearch={setSearch}
+            setLoading={setLoading}
+          />
+        </div>
+      </div>
       <div>
         <Nominations
           nominations={nominations}
           setNominations={setNominations}
-        />
-      </div>
-      <div className='ui divider' />
-      <div>
-        <SearchMovies
-          movieSearch={movieSearch}
-          setSearch={setSearch}
-          setLoading={setLoading}
         />
       </div>
       <div>

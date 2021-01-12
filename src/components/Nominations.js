@@ -15,7 +15,7 @@ export default function Nominations(props) {
 
   return (
     <div>
-      <h1 style={{ textAlign: 'center', marginBottom: '40px' }}>Nominations</h1>
+      <h1 style={{ textAlign: 'center', marginBottom: '1px', marginTop: '100px' }}>Nominations</h1>
       <div>
         <div className='ui grid'>
           {nominatedMovies.length > 0 ?
@@ -36,7 +36,7 @@ export default function Nominations(props) {
           }
         </div>
       </div>
-    </div>
+    </div >
 
   )
 }

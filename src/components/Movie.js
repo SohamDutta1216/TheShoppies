@@ -14,7 +14,7 @@ export default function Movie(props) {
   }
   return (
     <div className='contain'>
-      <img className='photo' src={movie.Poster} alt=''></img>
+      <img className='photo' src={movie.Poster} ></img>
 
       <h3 className='center'>{movie.Title}</h3>
       <div>
