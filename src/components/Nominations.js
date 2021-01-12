@@ -14,10 +14,10 @@ export default function Nominations(props) {
   }
 
   return (
-    <div className='ui column'>
-      <div className='ui segment'>
-        <h1 className='center'>Nominations</h1>
-        <div>
+    <div>
+      <h1 style={{ textAlign: 'center', marginBottom: '40px' }}>Nominations</h1>
+      <div>
+        <div className='ui grid'>
           {nominatedMovies.length > 0 ?
             nominatedMovies.map((movie, idx) => {
               return (
@@ -37,6 +37,7 @@ export default function Nominations(props) {
         </div>
       </div>
     </div>
+
   )
 }
 

@@ -4,16 +4,19 @@
   display:block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .center {
   text-align: center
 }
 
 .center-button{
-  text-align: center
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .contain{
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }

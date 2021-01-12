@@ -9,28 +9,27 @@ const Movies = (props) => {
   const movieSearch = props.movieSearch
 
   return (
-    <div>
-      <div className='ui segment'>
-        <h1 className='center'>Movies</h1>
-        {movieSearch.length > 0 ?
-          <div>{results && results.map((movie, idx) => {
-            return (
-              <Movie
-                key={idx}
-                movie={movie}
-                nominations={nominations}
-                setNominations={setNominations}
-              />
+    <div className='aligned'>
+      {movieSearch.length > 0 ?
+        <div>
+          <div className='ui grid'>
 
-            )
-          })}</div>
-          :
-          <div className='center'>
-            <div className='ui text loader'>Loading</div>
+            {results && results.map((movie, idx) => {
+              return (
+                <Movie
+                  key={idx}
+                  movie={movie}
+                  nominations={nominations}
+                  setNominations={setNominations}
+                />)
+            })}
           </div>
-        }
-      </div>
-    </div>
+        </div>
+        :
+        <div>
+        </div>
+      }
+    </div >
   )
 }
 

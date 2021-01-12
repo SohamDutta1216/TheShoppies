@@ -13,7 +13,7 @@ export default function Nominated(props) {
 
 
   return (
-    <div className='ui segment'>
+    <div className='contain'>
       <h3 className='center'>{movie.Title}</h3>
       <div>
         <p className='center'>{movie.Year}</p>
