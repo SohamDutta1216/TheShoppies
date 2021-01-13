@@ -3,8 +3,6 @@ import Movie from './Movie'
 import './Movies.css'
 
 
-
-
 export default function Movies(props) {
 
   const results = props.results
@@ -18,7 +16,7 @@ export default function Movies(props) {
     <div className='aligned'>
       {movieSearch.length > 0 ?
         <div>
-          <h1 className='searchRes'>Search results for "{movieSearch}"</h1>
+          <h1 style={{ textAlign: 'center' }}>Search results for "{movieSearch}"</h1>
           <div className='ui grid'>
             {results && results.map((movie, idx) => {
               return (
@@ -35,7 +33,7 @@ export default function Movies(props) {
         </div>
         :
         <div>
-          <h1 style={{ textAlign: 'center', marginTop: '400px', fontSize: '50px' }}>Search for your favorite movies!</h1>
+          <h1 style={{ textAlign: 'center', top: '40%', left: '30%', position: 'absolute', fontSize: '50px' }}>Search for your favorite movies!</h1>
         </div>
       }
     </div >

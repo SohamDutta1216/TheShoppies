@@ -10,6 +10,7 @@ export default function Nominations(props) {
   const nominNum = props.nominNum
   const setNominNum = props.setNominNum
 
+
   const removeNomination = function (movie) {
     delete nominations[movie]
     setNominations({ ...nominations })
@@ -23,7 +24,7 @@ export default function Nominations(props) {
     <div style={{ textAlign: 'center', marginBottom: '1px', marginTop: '100px', backgroundColor: '#e0e1e2' }}>
       <div>
         {nominNum === 0 ?
-          <h1 style={{ textAlign: 'center', marginTop: '400px', fontSize: '50px' }}>Nominate your top 5 favorite movies!</h1>
+          <h1 style={{ textAlign: 'center', top: '40%', left: '28%', position: 'absolute', fontSize: '50px' }}>Nominate your top 5 favorite movies!</h1>
           :
           <div className='ui grid'>
             {nominatedMovies.length > 0 ?

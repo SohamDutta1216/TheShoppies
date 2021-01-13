@@ -4,7 +4,7 @@
 
 .aligned {
   align-items: center;
-  font-size:14px;
+  margin-top: 150px;
 }
 
 .center {
@@ -20,15 +20,12 @@
   margin-bottom: 0px;
 }
 
-.newMovies{
-  text-align: center;
-  font-size: 60px;
-
-}
-
 .searchRes{
   text-align: center;
-  margin-top: 20px;
+  font-size: 30px;
+  margin-bottom: 100px;
 }
+
+
 
 

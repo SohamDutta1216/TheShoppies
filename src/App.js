@@ -4,15 +4,15 @@ import Movies from './components/Movies'
 import Nominations from './components/Nominations'
 import axios from 'axios'
 import './App.css'
-
+import useLocalStorage from './useLocalStorage'
 
 function FetchData() {
   const [movieSearch, setSearch] = useState('')
   const [results, setResults] = useState([])
-  const [nominations, setNominations] = useState({})
+  const [nominations, setNominations] = useLocalStorage('nominations', {})
   const [isLoading, setLoading] = useState(false)
-  const [toggle, setToggle] = useState(false)
-  const [nominNum, setNominNum] = useState(0)
+  const [toggle, setToggle] = useLocalStorage('toggle', false)
+  const [nominNum, setNominNum] = useLocalStorage('nominNum', 0)
   useEffect(() => {
     axios.get(`https://www.omdbapi.com/?apikey=d5633076&s=${movieSearch}`).then(res => {
       setTimeout(() => {
