@@ -47,10 +47,10 @@ export default function App() {
   }
 
   return (
-    <div style={{ background: '#fbf7ed' }}>
-      <div className='ui top fixed menu'>
+    <div>
+      <div className='ui inverted top fixed three item menu'>
         <div className="item">
-          <img className='title' src='/logo.png' alt='' />
+          <img className='logo' src='/logo.png' alt='' />
         </div>
         <div className="item">
           <SearchMovies
@@ -70,9 +70,9 @@ export default function App() {
               onClick={myNominations}
             >My Nominations {nominNum}/5</button>
           </div>
-
         </div>
       </div>
+
       {toggle === true ?
         <div>
           <Nominations
