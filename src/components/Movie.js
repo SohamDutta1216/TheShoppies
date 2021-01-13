@@ -7,14 +7,17 @@ export default function Movie(props) {
   const movie = props.movie
   const nominations = props.nominations
   const setNominations = props.setNominations
+  const nominNum = props.nominNum
+  const setNominNum = props.setNominNum
 
   function click() {
     setNominations({ ...nominations, [movie.Title]: [movie] })
     movie.clicked = true
+    setNominNum(nominNum + 1)
   }
   return (
     <div className='contain'>
-      <img className='photo' src={movie.Poster} ></img>
+      <img className='photo' src={movie.Poster} alt='Poster'></img>
 
       <h3 className='center'>{movie.Title}</h3>
       <div>

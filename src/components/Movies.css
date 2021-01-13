@@ -3,7 +3,7 @@
 }
 
 .aligned {
-  margin-top: 20px;
+  margin-top: 200px;
   margin-bottom:20px;
   align-items: center;
   font-size:14px;
@@ -22,7 +22,15 @@
   margin-bottom: 0px;
 }
 
+.newMovies{
+  text-align: center;
+  font-size: 60px;
 
+}
 
+.searchRes{
+  text-align: center;
+  margin-top: 20px;
+}
 
 
