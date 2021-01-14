@@ -74,7 +74,7 @@ export default function App() {
       </div>
       { nominNum === 5 ?
         <div>
-          <h1 style={{ textAlign: 'center', marginTop: '150px', fontSize: '60px' }}>My Top 5 Movie Nominations!</h1>
+          <h1 style={{ textAlign: 'center', marginTop: '150px', fontSize: '60px' }}>Your Top 5 Movie Nominations!</h1>
           <Nominations
             nominNum={nominNum}
             setNominNum={setNominNum}
