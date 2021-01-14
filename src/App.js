@@ -5,6 +5,7 @@ import Nominations from './components/Nominations'
 import axios from 'axios'
 import './App.css'
 import useLocalStorage from './useLocalStorage'
+import Tada from 'react-reveal/Tada';
 
 function FetchData() {
   const [movieSearch, setSearch] = useState('')
@@ -66,9 +67,11 @@ export default function App() {
               onClick={movies}
             >Movies</button>
             <div className="or"></div>
-            <button className="ui button"
-              onClick={myNominations}
-            >My Nominations {nominNum}/5</button>
+            <Tada spy={nominNum}>
+              <button className="ui button"
+                onClick={myNominations}
+              >My Nominations {nominNum}/5</button>
+            </Tada>
           </div>
         </div>
       </div>

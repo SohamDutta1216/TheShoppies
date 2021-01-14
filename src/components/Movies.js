@@ -1,6 +1,7 @@
 import React from 'react'
 import Movie from './Movie'
 import './Movies.css'
+import Fade from 'react-reveal/Fade';
 
 
 export default function Movies(props) {
@@ -33,7 +34,9 @@ export default function Movies(props) {
         </div>
         :
         <div>
-          <h1 style={{ textAlign: 'center', top: '40%', left: '30%', position: 'absolute', fontSize: '50px' }}>Search for your favorite movies!</h1>
+          <Fade left>
+            <h1 style={{ textAlign: 'center', top: '40%', left: '30%', position: 'absolute', fontSize: '50px' }}>Search for your favorite movies!</h1>
+          </Fade>
         </div>
       }
     </div >
