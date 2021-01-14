@@ -72,9 +72,9 @@ export default function App() {
           </div>
         </div>
       </div>
-
-      {toggle === true ?
+      { nominNum === 5 ?
         <div>
+          <h1 style={{ textAlign: 'center', marginTop: '150px', fontSize: '60px' }}>My Top 5 Movie Nominations!</h1>
           <Nominations
             nominNum={nominNum}
             setNominNum={setNominNum}
@@ -84,18 +84,30 @@ export default function App() {
         </div>
         :
         <div>
-          <Movies
-            nominNum={nominNum}
-            setNominNum={setNominNum}
-            results={results}
-            movieSearch={movieSearch}
-            isLoading={isLoading}
-            nominations={nominations}
-            setNominations={setNominations}
-          />
+          {toggle === true ?
+            <div>
+              <Nominations
+                nominNum={nominNum}
+                setNominNum={setNominNum}
+                nominations={nominations}
+                setNominations={setNominations}
+              />
+            </div>
+            :
+            <div>
+              <Movies
+                nominNum={nominNum}
+                setNominNum={setNominNum}
+                results={results}
+                movieSearch={movieSearch}
+                isLoading={isLoading}
+                nominations={nominations}
+                setNominations={setNominations}
+              />
+            </div>
+          }
         </div>
       }
-
 
     </div>
 
