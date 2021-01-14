@@ -2,6 +2,7 @@ import React from 'react'
 import Movie from './Movie'
 import './Movies.css'
 import Fade from 'react-reveal/Fade';
+import Loading from './Loading'
 
 
 export default function Movies(props) {
@@ -12,26 +13,29 @@ export default function Movies(props) {
   const movieSearch = props.movieSearch
   const nominNum = props.nominNum
   const setNominNum = props.setNominNum
+  const isLoading = props.isLoading
 
   return (
     <div className='aligned'>
       {movieSearch.length > 0 ?
-        <div>
-          <h1 style={{ textAlign: 'center' }}>Search results for "{movieSearch}"</h1>
-          <div className='ui grid'>
-            {results && results.map((movie, idx) => {
-              return (
-                <Movie
-                  nominNum={nominNum}
-                  setNominNum={setNominNum}
-                  key={idx}
-                  movie={movie}
-                  nominations={nominations}
-                  setNominations={setNominations}
-                />)
-            })}
+        isLoading === true ?
+          <div><Loading /></div>
+          : <div>
+            <h1 style={{ textAlign: 'center' }}>Search results for "{movieSearch}"</h1>
+            <div className='ui grid'>
+              {results && results.map((movie, idx) => {
+                return (
+                  <Movie
+                    nominNum={nominNum}
+                    setNominNum={setNominNum}
+                    key={idx}
+                    movie={movie}
+                    nominations={nominations}
+                    setNominations={setNominations}
+                  />)
+              })}
+            </div>
           </div>
-        </div>
         :
         <div>
           <Fade left>
@@ -41,4 +45,9 @@ export default function Movies(props) {
       }
     </div >
   )
+
+
+
 }
+
+

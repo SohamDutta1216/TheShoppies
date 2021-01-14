@@ -19,7 +19,7 @@ function FetchData() {
       setTimeout(() => {
         setLoading(false)
         setResults(res.data.Search)
-      }, 0)
+      }, 400)
     })
   }, [movieSearch])
   return {
@@ -57,6 +57,7 @@ export default function App() {
           <SearchMovies
             movieSearch={movieSearch}
             setSearch={setSearch}
+            isLoading={isLoading}
             setLoading={setLoading}
           />
         </div>
@@ -104,6 +105,7 @@ export default function App() {
                 results={results}
                 movieSearch={movieSearch}
                 isLoading={isLoading}
+                setLoading={setLoading}
                 nominations={nominations}
                 setNominations={setNominations}
               />
