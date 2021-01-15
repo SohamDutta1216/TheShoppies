@@ -45,7 +45,7 @@ export default function Nominations(props) {
                 })
                 :
                 <div style={{ textAlign: 'center', marginTop: '1px', marginBottom: '1px' }}>
-                  <div className='ui text loader'>Loading</div>
+                  <div className='massive active loader' />
                 </div>
               }
             </div>
