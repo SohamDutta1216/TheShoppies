@@ -15,6 +15,10 @@ export default function Movie(props) {
     setNominNum(nominNum + 1)
   }
 
+  function addDefaultSrc(ev) {
+    ev.target.src = 'default.jpg'
+  }
+
   return (
 
     <div style={{ marginTop: '30px', marginBottom: '20px' }}>
@@ -26,7 +30,10 @@ export default function Movie(props) {
         marginRight: '100px',
         marginTop: '40px',
         marginBottom: '40px'
-      }} src={movie.Poster} alt='Poster' />
+      }} src={movie.Poster}
+        alt='Poster'
+        onError={addDefaultSrc}
+      />
 
       <h3 style={{ textAlign: 'center' }}>{movie.Title}</h3>
       <div>
