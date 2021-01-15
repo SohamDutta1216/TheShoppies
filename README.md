@@ -1,6 +1,8 @@
 # Shopify Internship 2021
 
-Deployed Link - theshoppies-2021.netlify.app
+## Deployed Link  
+
+https://theshoppies-2021.netlify.app/
 
 ## Goal
 a webpage that can search OMDB for movies, and allow the user to save their favourite films they feel should be up for nomination. When they've selected 5 nominees they should be notified they're finished.
