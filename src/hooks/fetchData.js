@@ -14,8 +14,9 @@ export default function FetchData() {
   useEffect(() => {
     axios.get(`https://www.omdbapi.com/?apikey=d5633076&s=${movieSearch}`).then(res => {
       setTimeout(() => {
+        const movieData = res.data.Search
         setLoading(false)
-        setResults(res.data.Search)
+        setResults(movieData)
       }, 400)
     })
   }, [movieSearch])
