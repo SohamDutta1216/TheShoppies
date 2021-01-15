@@ -1,8 +1,8 @@
 import React from 'react'
-import './Movie.css'
 import Tada from 'react-reveal/Tada';
 
 export default function Movie(props) {
+
   const movie = props.movie
   const nominations = props.nominations
   const setNominations = props.setNominations
@@ -14,17 +14,27 @@ export default function Movie(props) {
     movie.clicked = true
     setNominNum(nominNum + 1)
   }
+
   return (
 
-    <div className='contain'>
-      <img className='photo' src={movie.Poster} alt='Poster'></img>
-      <h3 className='center'>{movie.Title}</h3>
+    <div style={{ marginTop: '30px', marginBottom: '20px' }}>
+      <img style={{
+        height: '300px',
+        width: '200px',
+        display: 'block',
+        marginLeft: '100px',
+        marginRight: '100px',
+        marginTop: '40px',
+        marginBottom: '40px'
+      }} src={movie.Poster} alt='Poster' />
+
+      <h3 style={{ textAlign: 'center' }}>{movie.Title}</h3>
       <div>
-        <p className='center'>{movie.Year}</p>
+        <p style={{ textAlign: 'center' }}>{movie.Year}</p>
       </div>
       <br />
       {movie.clicked === true ?
-        <div className='center-button'>
+        <div style={{ textAlign: 'center', marginBottom: '20px' }}>
           <Tada>
             <button className='ui disabled teal button'
             >Nominate</button>
@@ -33,7 +43,7 @@ export default function Movie(props) {
 
         :
         <div>
-          <div className='center-button'>
+          <div style={{ textAlign: 'center', marginBottom: '20px' }}>
             <button className='ui teal button'
               onClick={click}
             >Nominate</button>
@@ -41,8 +51,6 @@ export default function Movie(props) {
         </div>
 
       }
-
-
     </div>
   )
 }

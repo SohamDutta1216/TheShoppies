@@ -1,8 +1,6 @@
 import React from 'react'
 import Movie from './Movie'
-import './Movies.css'
 import Fade from 'react-reveal/Fade';
-import Loading from './Loading'
 
 
 export default function Movies(props) {
@@ -16,10 +14,10 @@ export default function Movies(props) {
   const isLoading = props.isLoading
 
   return (
-    <div className='aligned'>
+    <div style={{ textAlign: 'center', marginTop: '250px' }}>
       {movieSearch.length > 0 ?
         isLoading === true ?
-          <div><Loading /></div>
+          <div className="ui massive active loader"></div>
           : <div>
             <h1 style={{ textAlign: 'center' }}>Search results for "{movieSearch}"</h1>
             <div className='ui grid'>

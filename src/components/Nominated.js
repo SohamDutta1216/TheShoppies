@@ -1,7 +1,7 @@
 import React from 'react'
-import './Nominated.css'
 
 export default function Nominated(props) {
+
   const movie = props.nominate[0]
   const removeNomination = props.removeNomination
   const decreasNominNum = props.decreasNominNum
@@ -14,14 +14,23 @@ export default function Nominated(props) {
 
 
   return (
-    <div className='contain'>
-      <img className='photo' src={movie.Poster} alt=''></img>
-      <h3 className='center'>{movie.Title}</h3>
+
+    <div style={{ marginTop: '100px' }}>
+
+      <img style={{
+        height: '300px',
+        width: '200px',
+        display: 'block',
+        marginLeft: '65px',
+        marginRight: '65px',
+      }} src={movie.Poster} alt='' />
+
+      <h3 style={{ textAlign: 'center' }}>{movie.Title}</h3>
       <div>
-        <p className='center'>{movie.Year}</p>
+        <p style={{ textAlign: 'center' }}>{movie.Year}</p>
       </div>
       <br />
-      <div className='center'>
+      <div style={{ textAlign: 'center' }}>
         <button className='ui red button center'
           onClick={click}
         >

@@ -1,7 +1,6 @@
 import React from 'react'
-import './Nominations.css'
-import Nominated from './Nominated.js'
 import Fade from 'react-reveal/Fade';
+import Nominated from './Nominated'
 
 export default function Nominations(props) {
 
@@ -45,7 +44,7 @@ export default function Nominations(props) {
                   )
                 })
                 :
-                <div className='center'>
+                <div style={{ textAlign: 'center', marginTop: '1px', marginBottom: '1px' }}>
                   <div className='ui text loader'>Loading</div>
                 </div>
               }

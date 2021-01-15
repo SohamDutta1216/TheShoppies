@@ -1,31 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import SearchMovies from './components/SearchMovies'
 import Movies from './components/Movies'
 import Nominations from './components/Nominations'
-import axios from 'axios'
 import './App.css'
-import useLocalStorage from './useLocalStorage'
 import Tada from 'react-reveal/Tada';
-
-function FetchData() {
-  const [movieSearch, setSearch] = useState('')
-  const [results, setResults] = useState([])
-  const [nominations, setNominations] = useLocalStorage('nominations', {})
-  const [isLoading, setLoading] = useState(false)
-  const [toggle, setToggle] = useLocalStorage('toggle', false)
-  const [nominNum, setNominNum] = useLocalStorage('nominNum', 0)
-  useEffect(() => {
-    axios.get(`https://www.omdbapi.com/?apikey=d5633076&s=${movieSearch}`).then(res => {
-      setTimeout(() => {
-        setLoading(false)
-        setResults(res.data.Search)
-      }, 400)
-    })
-  }, [movieSearch])
-  return {
-    results, setResults, movieSearch, setSearch, isLoading, setLoading, nominations, setNominations, toggle, setToggle, nominNum, setNominNum
-  }
-}
+import FetchData from './hooks/fetchData'
 
 export default function App() {
   const {
