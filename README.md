@@ -41,8 +41,8 @@ a webpage that can search OMDB for movies, and allow the user to save their favo
 "react-scripts": "4.0.1",
 "web-vitals": "^0.2.4"
 
-![Alt text](https://ibb.co/gR9bYBh)
-![Alt text](https://ibb.co/Bt9vChm)
-![Alt text](https://ibb.co/2FXbKXm)
-![Alt text](https://ibb.co/X80wXNW)
-![Alt text](https://ibb.co/Th8brkx)
+![image](https://ibb.co/gR9bYBh)
+![image](https://ibb.co/Bt9vChm)
+![image](https://ibb.co/2FXbKXm)
+![image](https://ibb.co/X80wXNW)
+![image](https://ibb.co/Th8brkx)
